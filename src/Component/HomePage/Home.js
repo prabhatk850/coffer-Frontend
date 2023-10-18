@@ -50,6 +50,8 @@ function HomePage() {
     ],
   };
   const Wrapper = styled.div`
+  height: 750px;
+  overflow-y: scroll;
     @media (max-width: 767px) {
       padding-left: 5px;
     }
