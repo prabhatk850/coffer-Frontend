@@ -50,17 +50,12 @@ function HomePage() {
     ],
   };
   const Wrapper = styled.div`
-    background-color: #2f334a;
-    overflow-y: scroll; 
     @media (max-width: 767px) {
-      width: 100vw;
+      padding-left: 5px;
     }
   `;
 
-  const Charts = styled.div`
-  
-  
-  `;
+
   const ChartFlex = styled.div`
     padding-left: 10px;
     display: flex;
@@ -117,7 +112,7 @@ function HomePage() {
 
           <ChartFlex>
             <Div>
-              Bubble chart
+              Pie chart
               <Piechart data={Data} />
             </Div>
             <Div>

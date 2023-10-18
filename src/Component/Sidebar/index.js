@@ -8,7 +8,6 @@ padding: 10px 30px ;
 background-color: #2F334A;
 height: 700px;
 min-width: fit-content;
-overflow-y: scroll;
 border: 1px solid gray;
 border-top-right-radius: 15px;
 border-bottom-right-radius: 15px;
@@ -47,10 +46,11 @@ padding: 10px;
 
 
 
+
 function index() {
   return (
     <Wrapper>
-        <Dashboard> <BsFillArchiveFill style={{height:"20px",width:"20px",paddingRight:"10px"}} /> Dashboard</Dashboard>
+        <Dashboard><BsFillArchiveFill style={{height:"20px",width:"20px",marginRight:"10px"}}/>Dashboard</Dashboard>
         <Info><RxDot/> End Year </Info>
         <Info><RxDot/> Topics </Info>
         <Info><RxDot/> Sector </Info>
