@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import { getData } from "./Services/service";
+import { getData } from "../../Services/service";
 import styled from "styled-components";
-import Barchart from "./Chart/barchat";
-import Linechart from "./Chart/linechart";
-import Polarchart from "./Chart/polarareachart";
-import Doughnutchart  from "./Chart/Doughnutchart";
-import Radarchart from "./Chart/Radarchart";
-import Piechart from "./Chart/Piechart";
+import Barchart from "../../Chart/barchat";
+import Linechart from "../../Chart/linechart";
+import Polarchart from "../../Chart/polarareachart";
+import Doughnutchart  from "../../Chart/Doughnutchart";
+import Radarchart from "../../Chart/Radarchart";
+import Piechart from "../../Chart/Piechart";
 
 
-function App() {
+function HomePage() {
   const [data, setDataa] = useState([]);
   useEffect(() => {
     getData().then((res) => {
@@ -131,4 +130,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
