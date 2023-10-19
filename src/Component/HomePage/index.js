@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Header/Header';
 import SideBar from "../Sidebar"
 import Home from "./Home";
@@ -9,16 +9,20 @@ width:100%;
 background-color: #2F334A;
 `;
 
-function index() {
+
+
+function Index() {
+  const [isSidebar, setIsSidebar]=useState(false)
+  const [filter, setFilter]=useState("end_year")
   return (
     <Wrapper>
-        <Header/>
+        <Header isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
         <div style={{display:'flex'}}>
-        <SideBar/>
-        <Home/>
+        <SideBar isSidebar={isSidebar} filter={filter} setFilter={setFilter}/>
+        <Home filter={filter}/>
         </div>
     </Wrapper>
   )
 }
 
-export default index
+export default Index

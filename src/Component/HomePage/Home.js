@@ -9,17 +9,16 @@ import Radarchart from "../../Chart/Radarchart";
 import Piechart from "../../Chart/Piechart";
 
 
-function HomePage() {
+function HomePage({filter}) {
   const [data, setDataa] = useState([]);
   useEffect(() => {
     getData().then((res) => {
       setDataa(res.data);
     });
   }, []);
-
   const labels = data?.map((e) => {
-    console.log("first", e.source);
-    return e.source;
+    console.log("first", e[filter]);
+    return e[filter];
   });
  
   const Data = {
@@ -47,13 +46,55 @@ function HomePage() {
           return e.likelihood;
         }),
       },
+      {
+        label: "Country",
+        backgroundColor: "#FF9E43",
+        data: data?.map((e) => {
+          return e.country;
+        }),
+      },
     ],
   };
+
+  const Data2 = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Year",
+        backgroundColor: "#7366F0",
+        data: data?.map((e) => {
+          return e.start_year;
+        }),
+      },
+     {
+        label: "Topics",
+        backgroundColor: "#29C76F",
+        color:"white",
+        data: data?.map((e) => {
+          return e.topic;
+        }),
+      },
+      {
+        label: "region",
+        backgroundColor: "#7366F0",
+        data: data?.map((e) => {
+          return e.region;
+        }),
+      },
+      
+    ],
+  };
+
+ 
+
   const Wrapper = styled.div`
   height: 750px;
+  padding-bottom: 10px;
   overflow-y: scroll;
     @media (max-width: 767px) {
       padding-left: 5px;
+      height: auto;
+      display: block;
     }
   `;
 
@@ -104,7 +145,7 @@ function HomePage() {
           <ChartFlex>
             <Div>
               PolarArea Chart
-              <Polarchart data={Data} />
+              <Polarchart data={Data2} />
             </Div>
             <Div>
               Doughnut Chart
@@ -115,11 +156,11 @@ function HomePage() {
           <ChartFlex>
             <Div>
               Pie chart
-              <Piechart data={Data} />
+              <Piechart data={Data2} />
             </Div>
             <Div>
               Radar Chart
-              <Radarchart data={Data} />
+              <Radarchart data={Data2} />
             </Div>
           </ChartFlex>
         
