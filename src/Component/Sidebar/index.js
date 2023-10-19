@@ -86,14 +86,14 @@ function Index({isSidebar,setFilter}) {
         <Mobile>
         <Dashboard>Dashboard</Dashboard>
         <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> End Year </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> Topics </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> Sector </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> Region </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> PEST </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> Source </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> SWOT </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> Country </Info>
-        <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> City </Info>
+        <Info onClick={(e)=>{setFilter("topic")}}><RxDot/> Topics </Info>
+        <Info onClick={(e)=>{setFilter("sector")}}><RxDot/> Sector </Info>
+        <Info onClick={(e)=>{setFilter("region")}}><RxDot/> Region </Info>
+        <Info onClick={(e)=>{setFilter("pestle")}}><RxDot/> PEST </Info>
+        <Info onClick={(e)=>{setFilter("source")}}><RxDot/> Source </Info>
+        {/* <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> SWOT </Info> */}
+        <Info onClick={(e)=>{setFilter("country")}}><RxDot/> Country </Info>
+        {/* <Info onClick={(e)=>{setFilter("end_year")}}><RxDot/> City </Info> */}
         </Mobile>:""}
     </Wrapper>
   )

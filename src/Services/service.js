@@ -9,3 +9,4 @@ export const getData = ()=>{
         console.log("err in getdata",err)
     })
 }
+

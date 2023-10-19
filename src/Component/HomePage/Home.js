@@ -9,6 +9,7 @@ import Radarchart from "../../Chart/Radarchart";
 import Piechart from "../../Chart/Piechart";
 
 
+
 function HomePage({filter}) {
   const [data, setDataa] = useState([]);
   useEffect(() => {
@@ -163,7 +164,7 @@ function HomePage({filter}) {
               <Radarchart data={Data2} />
             </Div>
           </ChartFlex>
-        
+          
     </Wrapper>
   );
 }
